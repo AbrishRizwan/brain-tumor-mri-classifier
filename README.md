@@ -79,9 +79,14 @@ Test confusion matrix (rows = true class, columns = predicted class):
 - The no-tumor class has only 17 test images, so its recall (1.00) is not reliable.
 - The class mix differs between validation and test, so compare per-class recall rather than overall accuracy.
 
-| Validation | Clean test |
-|---|---|
-| ![validation confusion matrix](assets/cm_validation.png) | ![test confusion matrix](assets/cm_test.png) |
+Validation confusion matrix (final model; rows = true class, columns = predicted class):
+
+|  | Glioma | Meningioma | No tumor | Pituitary |
+|---|---|---|---|---|
+| **Glioma** | 142 | 7 | 0 | 0 |
+| **Meningioma** | 13 | 142 | 1 | 14 |
+| **No tumor** | 1 | 3 | 67 | 0 |
+| **Pituitary** | 0 | 8 | 0 | 157 |
 
 ## Grad-CAM
 
@@ -97,6 +102,8 @@ Six images is a small sample, and Grad-CAM on ResNet50's last layer is coarse (7
 - The **clean test set is small** (306 images) and the `no_tumor` class has only 17 test images.
 - Images come from **one public dataset**; there is no external validation.
 - Grad-CAM suggests the model may rely on **non-tumor cues**, such as scan orientation or head position (a hypothesis, not tested).
+- Training is not fully deterministic, so re-running the notebook gives slightly different numbers. The results above are from the run that produced the published model.
+- The test set was evaluated more than once (I re-ran the notebook), but no model choices were made using test results.
 - Exact-duplicate detection does not catch near-duplicates.
 - **Not clinically reliable.** Educational use only.
 
@@ -133,12 +140,12 @@ Tested with TensorFlow 2.21.0 and Keras 3.13.2.
 
 ```
 brain-tumor-mri-classifier/
-├── app.py                 # Streamlit demo
+├── app.py                 
 ├── requirements.txt
 ├── README.md
 ├── notebooks/
-│   └── brain_mri.ipynb    # data cleaning, training, evaluation, Grad-CAM
-└── assets/                # figures used in this README
+│   └── brain_mri.ipynb    
+└── assets/                
 ```
 
 ## Tech stack
