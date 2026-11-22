@@ -143,8 +143,8 @@ brain-tumor-mri-classifier/
 ├── app.py                 
 ├── requirements.txt
 ├── README.md
-├── notebooks/
-│   └── brain_mri.ipynb    
+├── notebook/
+│   └── MRI.ipynb    
 └── assets/                
 ```
 
