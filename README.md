@@ -103,7 +103,7 @@ Six images is a small sample, and Grad-CAM on ResNet50's last layer is coarse (7
 - Images come from **one public dataset**; there is no external validation.
 - Grad-CAM suggests the model may rely on **non-tumor cues**, such as scan orientation or head position (a hypothesis, not tested).
 - Training is not fully deterministic, so re-running the notebook gives slightly different numbers. The results above are from the run that produced the published model.
-- The test set was evaluated more than once (I re-ran the notebook), but no model choices were made using test results.
+- I re-ran the notebook once, which gave slightly different numbers. The published model and all figures in this README come from the first run, and I did not tune any settings using the test set.
 - Exact-duplicate detection does not catch near-duplicates.
 - **Not clinically reliable.** Educational use only.
 
@@ -124,14 +124,14 @@ The app takes an uploaded MRI image, shows the predicted class with per-class pr
 ## How to run
 
 ```bash
-git clone https://github.com/<GITHUB_USERNAME>/brain-tumor-mri-classifier.git
+git clone https://github.com/AbrishRizwan/brain-tumor-mri-classifier.git
 cd brain-tumor-mri-classifier
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
 The app downloads the trained model from Hugging Face on first launch:
-`https://huggingface.co/<HF_USERNAME>/brain-mri-resnet50`
+`https://huggingface.co/AbrishRizwan/brain-mri-resnet50`
 
 Tested with TensorFlow 2.21.0 and Keras 3.13.2.
 
