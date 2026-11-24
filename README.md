@@ -1,5 +1,5 @@
 # Brain Tumor MRI Classification (Educational Project)
-
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AbrishRizwan/brain-tumor-mri-classifier/blob/main/notebook/MRI.ipynb)
 > **Disclaimer:** This is a learning project. It is **not a medical device** and must **not** be used for diagnosis or any clinical decision. Please do not upload real patient scans to the demo.
 
 A 4-class brain MRI classifier (glioma, meningioma, pituitary tumor, no tumor) built with transfer learning (ResNet50). The main finding of this project is not the accuracy number but **how much the number depended on how the data was split and cleaned**.
@@ -133,6 +133,8 @@ The app downloads the trained model from Hugging Face on first launch:
 `https://huggingface.co/AbrishRizwan/brain-mri-resnet50`
 
 Tested with TensorFlow 2.21.0 and Keras 3.13.2.
+
+To run notebook/MRI.ipynb in Google Colab, add your KAGGLE_API_TOKEN to Colab Secrets (key icon in the left sidebar) before running the dataset download cell.
 
 ## Repository structure
 
