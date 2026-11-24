@@ -117,8 +117,7 @@ Six images is a small sample, and Grad-CAM on ResNet50's last layer is coarse (7
 
 ## Demo
 
-<!-- TODO: add the live Streamlit link here once deployed. If deployment is not possible, delete this section and add screenshots in assets/ instead. -->
-**Live demo:** TODO
+**Live demo:** https://brain-tumor-mri-classifier-a5avbd2zsm5jzxohwz8mpa.streamlit.app/
 
 The app takes an uploaded MRI image, shows the predicted class with per-class probabilities, and displays the limitations above.
 
