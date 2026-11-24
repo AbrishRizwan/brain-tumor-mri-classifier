@@ -103,7 +103,6 @@ Six images is a small sample, and Grad-CAM on ResNet50's last layer is coarse (7
 - Images come from **one public dataset**; there is no external validation.
 - Grad-CAM suggests the model may rely on **non-tumor cues**, such as scan orientation or head position (a hypothesis, not tested).
 - Training is not fully deterministic, so re-running the notebook gives slightly different numbers. The results above are from the run that produced the published model.
-- I re-ran the notebook once, which gave slightly different numbers. The published model and all figures in this README come from the first run, and I did not tune any settings using the test set.
 - Exact-duplicate detection does not catch near-duplicates.
 - **Not clinically reliable.** Educational use only.
 
